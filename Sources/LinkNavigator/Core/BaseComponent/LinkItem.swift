@@ -1,5 +1,4 @@
 import Foundation
-import URLEncodedForm
 
 // MARK: - LinkItem
 
@@ -87,7 +86,7 @@ extension String {
       return decodedValue
     }
     guard let data = Data(base64Encoded: self) else { return .none }
-    return (try? JSONDecoder().decode(T.self, from: data)) ?? (try? URLEncodedFormDecoder().decode(T.self, from: data))
+    return try? JSONDecoder().decode(T.self, from: data)
   }
 
   // MARK: Fileprivate
