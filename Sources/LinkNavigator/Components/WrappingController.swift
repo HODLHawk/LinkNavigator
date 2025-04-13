@@ -22,7 +22,7 @@ public final class WrappingController<Content: View>: UIHostingController<Conten
     self.matchPath = matchPath
     self.eventSubscriber = eventSubscriber
     super.init(rootView: content())
-    super.title = title ?? matchPath
+    super.title = title
   }
 
   required init?(coder _: NSCoder) {
