@@ -24,9 +24,10 @@ let package = Package(
   targets: [
     .target(
       name: "LinkNavigator",
-      dependencies: [
-        "URLEncodedForm",
-      ]),
+//      dependencies: [
+//        "URLEncodedForm",
+//      ]
+    ),
     .testTarget(
       name: "LinkNavigatorTests",
       dependencies: ["LinkNavigator"]),
