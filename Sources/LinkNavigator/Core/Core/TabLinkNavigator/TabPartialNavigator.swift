@@ -272,7 +272,7 @@ extension TabPartialNavigator: TabLinkNavigatorProtocol {
         .compactMap { $0 as? MatchPathUsable } ?? []
     } else {
       matchPathUsables = rootNavigator?.tabRootPartialNavigators
-        .flatMap(\.currentController?.viewControllers)
+        .compactMap(\.currentController?.viewControllers)
         .compactMap { $0 as? MatchPathUsable } ?? []
     }
 
@@ -301,7 +301,7 @@ extension TabPartialNavigator: TabLinkNavigatorProtocol {
 
   public func allSend(linkItem: LinkItem) {
     rootNavigator?.tabRootPartialNavigators
-      .flatMap(\.currentController?.viewControllers)
+      .compactMap(\.currentController?.viewControllers)
       .compactMap { $0 as? MatchPathUsable }
       .forEach {
         $0.eventSubscriber?.receive(encodedItemString: linkItem.encodedItemString)
@@ -364,7 +364,7 @@ extension UINavigationController {
 
 // MARK: - UINavigationController + UINavigationControllerDelegate
 
-extension UINavigationController: UINavigationControllerDelegate {
+extension UINavigationController: @retroactive UINavigationControllerDelegate {
   public func navigationController(_: UINavigationController, didShow viewController: UIViewController, animated _: Bool) {
     guard let matchPathUsableVC = viewController as? MatchPathUsable else { return }
 
