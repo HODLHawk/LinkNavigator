@@ -381,4 +381,4 @@ public final class DebugWrappingViewController<Content: View>: UIHostingControll
 
 ## - License
 
-This library is released under the MIT license. See [LICENSE](https://github.com/interactord/LinkNavigator/blob/main/LICENSE.md) for details.
+This library is released under the MIT license. See [LICENSE](LICENSE.md) for details.
