@@ -1,6 +1,6 @@
 Licensed under the **MIT** license
 
-> Copyright (c) 2025 Stepan moon (via: sbezhuk@icloud.com)
+> Copyright (c) 2025 Stepan Bezhuk (via: sbezhuk@icloud.com)
 >
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
